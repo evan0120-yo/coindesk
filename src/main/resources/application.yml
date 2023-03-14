@@ -1,0 +1,51 @@
+################################ 
+#jwt:
+#  secret: dudurududadada
+ ################################ 
+#logging:
+#  file:
+#    name: MyBakery.log
+#  level:
+#    root: info
+ ################################    
+server:
+  servlet:
+    context-path: /api
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8081
+ ################################
+spring:
+#  banner:
+#    charset: UTF-8
+#    spring.datasource.url=jdbc:h2:mem:testdb
+#    spring.datasource.driverClassName=org.h2.Driver
+#    spring.datasource.username=sa
+#    spring.datasource.password=
+#    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#    
+#    spring.h2.console.enabled=true
+#    
+#    spring.liquibase.change-log=classpath:/db/changelog/changelog-master.xml
+#    logging.level.liquibase = INFO
+  datasource:
+     driver-class-name: org.h2.Driver
+     url: jdbc:h2:mem:todolist
+     username: sa
+     password: 
+#  servlet:
+#   multipart:
+#    max-file-size: 1MB
+#    max-request-size: 3MB
+  jpa:
+     database-platform: org.hibernate.dialect.H2Dialect
+#    open-in-view: false
+#    properties:
+#      hibernate:
+#        show_sql: true
+#        format_sql: false
+     hibernate: 
+       ddl-auto: create-drop
+#  jackson:
+#   date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+#   time-zone: GMT+8   
